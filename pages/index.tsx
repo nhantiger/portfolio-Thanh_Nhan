@@ -5,6 +5,9 @@ import Header from '@/components/Header';
 import type { NextPage } from 'next';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import Experisence from '@/components/Experisence';
+import Skills from '@/components/Skills';
+import Project from '@/components/Project';
 
 const Home: NextPage = () =>{
 
@@ -26,11 +29,17 @@ const Home: NextPage = () =>{
      <About/>
      </section>
       {/* Experisence */}
-
+      <section id="experisence" className='snap-center'>
+     <Experisence/>
+     </section>
       {/* Skills */}
-
+    <section id='skills' className='snap-start'>
+      <Skills/>
+    </section>
       {/* Project */}
-
+    <section id='project' className='snap-start'>
+      <Project/>
+    </section>
       {/* Contact me */}
     
     </div>

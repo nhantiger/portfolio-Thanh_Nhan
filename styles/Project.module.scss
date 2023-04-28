@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  height: 100%;
+  background-color: #000;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(160deg, transparent 50%, #bf860b 70%);
+  }
+}
+
+.grid-container {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.overflow-x-auto-mobile {
+  @apply overflow-x-auto;
+}
+
+@media (min-width: 640px) {
+  .overflow-x-auto-mobile {
+    overflow-x: hidden;
+  }
+}
+

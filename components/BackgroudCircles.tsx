@@ -3,6 +3,7 @@ import { Cursor } from 'react-simple-typewriter';
 import { motion } from 'framer-motion'
 import Link from 'next/link';
 
+
 type Props = {
   text: string
 }
@@ -30,7 +31,7 @@ function BackgroudCircles({ text }: Props) {
       <div className='absolute border border-[#333333] rounded-full h-[700px] w-[700px] mt-52 animate-ping'/>
       <div className='mt-20 pt-20'>
         <div className='mt-20 pt-20 '>
-        <img className='relative rounded-full h-32 w-32 mx-auto object-cover' src="https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        <img className='relative rounded-full h-32 w-32 mx-auto object-cover' src="https://b-f10-zpcloud.zdn.vn/7436265492822321083/a18ff9079822477c1e33.jpg" alt="" />
         </div>
       <div className=''>
     <h2 className='text-orange-500 uppercase text-xl tracking-[15px]'>Front-end Developer</h2>

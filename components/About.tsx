@@ -39,11 +39,11 @@ function About({}: Props) {
             viewport={{
                 once:true,
             }}
-            src='https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/313360099_1258797034900712_5732619965135439686_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Kc4f2ZPdHEgAX8gmKxB&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfBnmmDQ_s4_mX7h9H_i6t_uOWEtZY1W5qdTgjhPQ1alTQ&oe=644D2801'
+            src='https://b-f10-zpcloud.zdn.vn/3251896299789389941/d414c257bc72632c3a63.jpg'
             className="w-56 h-56 -mb-20 md:mb-0 rounded-full  object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[350px]">
             </motion.img>
             <div className='space-y-10 px-0 md:px-10'>
-                {/* LINE DRAWING */}
+               
                 <p className='text-base'>
                 I aspire to become a professional, creative Front-end developer and contribute to the development of the company. I am committed to continuous learning and skill development to bring high quality products that meet the requirements of customers and colleagues.
                 </p>
