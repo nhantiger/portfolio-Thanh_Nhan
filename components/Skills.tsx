@@ -1,31 +1,37 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import Skill from './Skill';
+import 'aos/dist/aos.css';
+
 type Props = {}
 
 function Skills({}: Props) {
-  return (
-    <motion.div
-    initial={{
-        opacity:0,
-    }}
-    whileInView={{
-        opacity:1,
-    }}
-    transition={{
-        duration:1.5,
-    }}
-    className=''
-    >
-        <div className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-            <h3 className=' absolute top-24 uppercase tracking-[20px] xl:fixed text-gray-500 text-2xl '>Skills</h3>
-            <h3 className='absolute text-sm top-36 uppercase tracking-[3px] xl:fixed text-gray-500 '> Hover over a skills for currency PROFICIENCY</h3>
-            <div className='flex md:mt-20 ` md:pt-20 mb-20 grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-5'>
-
-
-
-                <div className=' md:mt-20 '> 
-                <Skill
+    return (
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+            
+        className=""
+      >
+        <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+          <h3 className="absolute top-24 uppercase tracking-[20px] xl:fixed text-gray-500 text-2xl md:whitespace-nowrap">
+            Skills
+          </h3>
+          <h3 className="absolute text-sm top-36 uppercase tracking-[3px] xl:fixed text-gray-500 md:whitespace-nowrap">
+            {" "}
+            Hover over a skills for currency PROFICIENCY
+          </h3>
+          <div className="flex md:mt-20 md:pt-20 md:mb-20  grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-5" >
+           
+                <div className=' md:mt-20' >  
+                <Skill  
                 imageUrl="https://www.svgrepo.com/show/354113/nextjs-icon.svg"
                 percentage={90}
                 />
