@@ -25,20 +25,20 @@ function Skill({ imageUrl, percentage }: Props) {
       onMouseLeave={handleMouseLeave}
     >
       <motion.img
-        initial={{
-          x: -200,
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 1,
-        }}
-        src={imageUrl}
-        className="rounded-full bg-white border border-gray-500 object-cover w-18 h-18 md:w-28 md:h-28 xl:w-24 xl:h-24 filter transition duration-300 ease-in-out mb-2 md:m-4"
-      />
+  initial={{
+    x: -200,
+    opacity: 0,
+  }}
+  whileInView={{
+    opacity: 1,
+    x: 0,
+  }}
+  transition={{
+    duration: 1,
+  }}
+  src={imageUrl}
+  className="rounded-full bg-white border border-gray-500 object-cover w-14 h-14 md:w-28 md:h-28 xl:w-24 xl:h-24 filter transition duration-300 ease-in-out mb-2 md:m-4"
+/>
       <div
         className={`absolute inset-0 bg-white ${
           isHovered ? 'opacity-80' : 'opacity-0'

@@ -8,6 +8,7 @@ import About from '@/components/About';
 import Experisence from '@/components/Experisence';
 import Skills from '@/components/Skills';
 import Project from '@/components/Project';
+import Contact from '@/components/Contact';
 
 const Home: NextPage = () =>{
 
@@ -41,7 +42,9 @@ const Home: NextPage = () =>{
       <Project/>
     </section>
       {/* Contact me */}
-    
+    <section className='snap-start  '>
+      <Contact/>
+    </section>
     </div>
   );
 };

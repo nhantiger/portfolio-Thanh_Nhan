@@ -5,9 +5,8 @@ type Props = {}
 
 function ExperisenceCart({}: Props) {
     return (
-<article className='flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-full sm:w-3/4 md:w-[500px] xl:w-[800px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
-  
-
+       <div className='ml-10 pl-20 md:ml-0 md:pl-0 w-full md:pt-0  mt-10 '>
+        <article className='flex items-center mb-10 flex-col rounded-lg space-y-4 flex-shrink-0 w-full sm:w-3/4 md:w-[500px] xl:w-[800px] snap-center bg-[#292929] p-10 ml-20 pl-10 md:ml-10  hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
             <motion.img initial={{
                 y:-100,
             opacity:0,
@@ -46,6 +45,7 @@ function ExperisenceCart({}: Props) {
 </ul>
 </div>
 </article>
+       </div>     
 )
 }
 
