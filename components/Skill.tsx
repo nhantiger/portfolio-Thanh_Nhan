@@ -31,9 +31,9 @@ function Skill({ imageUrl, percentage }: Props) {
 
   React.useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0, scale: 1 });
+      controls.start({ opacity: 1, y: 0, scale: 1, rotate: 0 });
     } else {
-      controls.start({ opacity: 0, y: 50, scale: 0.8 });
+      controls.start({ opacity: 0, y: 50, scale: 1.8, rotate: 95 });
     }
   }, [controls, inView]);
 
@@ -43,7 +43,7 @@ function Skill({ imageUrl, percentage }: Props) {
       className="group relative"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      initial={{ opacity: 0, y: 50, scale: 0.8 }}
+      initial={{ opacity: 0, y: 50, scale: 1.5, rotate: 95 }}
       animate={controls}
       transition={spring}
     >
