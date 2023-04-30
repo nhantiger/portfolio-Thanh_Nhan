@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import styles from '../styles/Project.module.scss';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 type Props = {};
-
 const projects = [
   {
     title: 'Blog Travel',
@@ -25,45 +26,27 @@ const projects = [
   },
 ];
 
-
 function Project({}: Props) {
-  const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: 'easeInOut' },
-    },
-  };
-  
-  const descriptionVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: 'easeInOut' },
-    },
-  };
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: 'easeInOut' },
-  },
-};
-
-  const cardVariants = {
-    hover: {
-      scale: 1.05,
-      boxShadow: "0 8px 16px rgba(0,0,0,0.3)",
-      transition: { duration: 0.2 }
-    },
-    initial: {
-      scale: 1,
-      boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-      transition: { duration: 0.2 }
-    }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -77,36 +60,37 @@ const imageVariants = {
       transition={{
         duration: 1.5,
       }}
-      className={styles.container}
+      className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
     >
-      <div className="relative h-screen md:flex-row max-w-7xl px-4 sm:px-10 mx-auto items-center">
-        <div className="grid grid-cols-3 gap-8 mt-10 md:pt-20 sm:mt-24">
-          <div></div>
-          <div className="flex items-center justify-center">
-            <h3 className="uppercase  tracking-[20px] text-gray-500 md:top-24 mb-10 md:mt-10 mt-20 text-2xl">Project</h3>
-          </div>
-          <div></div>
+      <h3 className='absolute top-24 xl:fixed uppercase ml-5 tracking-[20px] text-gray-500 text-2xl'>
+        Project
+      </h3>
+      <div className='w-full md:w-4/5 md:mt-20'>
+        <Slider {...settings}>
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-6 cursor-pointer col-span-3 sm:col-span-1"
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
-            >
-              <a href={project.url}>
-                <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg mb-4" />
-                <h4 className="text-lg text-black font-semibold mb-2">{project.title}</h4>
-                <p className="text-gray-600">{project.description}</p>
+            <div key={index} className='flex flex-col items-center'>
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className='w-full h-56 md:h-80 object-cover rounded-lg'
+              />
+              <h4 className='mt-4 text-2xl font-bold'>{project.title}</h4>
+              <p className='mt-2 text-gray-100'>{project.description}</p>
+              <a
+                href={project.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                
+                className='mt-4 inline-block bg-[#3f51b5] text-white py-2 px-4 rounded'
+              >
+                Xem chi tiết
               </a>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </motion.div>
   );
-  
-  
 }
 
 export default Project;
