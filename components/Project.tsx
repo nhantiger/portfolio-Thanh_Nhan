@@ -10,7 +10,7 @@ const projects = [
     title: 'Blog Travel',
     description: 'Là một trang web du lịch giới thiệu các tour du lịch và địa điểm tham quan nổi tiếng. Mục đích của trang web là cung cấp thông tin về các địa điểm du lịch hấp dẫn, giúp người dùng lên kế hoạch và đặt tour du lịch một cách dễ dàng.',
     imageUrl: 'https://f10-zpcloud.zdn.vn/7659049788213854298/1f26d4554f7e9020c96f.jpg',
-    url: 'https://tralveltour.vercel.app/',
+    url: 'https://topnepaltrek.com/',
   },
   {
     title: 'Building Materials',
